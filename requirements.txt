@@ -1,0 +1,4 @@
+python-decouple
+swibots
+python-telegram
+pillow
