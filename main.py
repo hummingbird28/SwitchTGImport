@@ -159,6 +159,10 @@ async def copyMessages(ctx: BotContext[CommandEvent]):
                 task_count=TASK_COUNT,
                 part_size=10 * 10 * 1024,
             )
+            try:
+                os.remove(path)
+            except Exception as er:
+                print(er)
         except Exception as er:
             print(er, message)
     await msg.delete()
